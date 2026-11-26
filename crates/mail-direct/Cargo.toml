@@ -1,0 +1,27 @@
+[package]
+name = "rinse-mail-direct"
+description = "In-process implementation of the content pipeline for tests, development and the server node; not a security wall"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+rinse-mail.workspace = true
+rinse-mail-engine.workspace = true
+async-trait.workspace = true
+tokio = { workspace = true, features = ["rt", "time"] }
+
+[dev-dependencies]
+rinse-mail = { workspace = true, features = ["testing"] }
+bytes.workspace = true
+tokio.workspace = true
+
+[package.metadata.dojo]
+kind = "implementation"
+implements = "rinse-mail"
+
+[lints]
+workspace = true

@@ -1,0 +1,4 @@
+render_raw ../crates/mail/fixtures/hostile
+engine_render ../crates/mail/fixtures/hostile
+decode_part ../crates/mail/fixtures/hostile
+facts ../crates/mail/fixtures/hostile

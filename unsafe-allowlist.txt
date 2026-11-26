@@ -1,0 +1,6 @@
+# Files that may contain `#![allow(unsafe_code)]` (or `#[allow(unsafe_code)]`).
+# Unsafe is allowed only for OS sandbox FFI that has no safe binding (the sandbox layer).
+# Every unsafe block carries a `// SAFETY:` comment, and each file is listed here with its crate's docs explaining why.
+crates/sandbox/src/sys.rs
+crates/sandbox-macos/src/ffi.rs
+crates/sandbox-linux/src/namespaces.rs

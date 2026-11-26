@@ -1,0 +1,29 @@
+[package]
+name = "rinse-mail-worker"
+description = "The content engine as a WebAssembly component (wasm32-wasip2 command): request on stdin, response on stdout"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[features]
+test-hooks = []
+
+[dependencies]
+rinse-mail.workspace = true
+rinse-mail-engine.workspace = true
+postcard.workspace = true
+
+[dev-dependencies]
+rinse-mail = { workspace = true, features = ["testing"] }
+rinse-doc-model.workspace = true
+bytes.workspace = true
+serde.workspace = true
+
+[package.metadata.dojo]
+kind = "app"
+
+[lints]
+workspace = true

@@ -1,0 +1,9 @@
+From: Ann Sender <ann@example.com>
+To: Bob Reader <bob@example.org>
+Subject: Newsletter
+Date: Tue, 24 Nov 2026 10:00:00 +0000
+Message-ID: <fixture@example.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html><body><p>News of the week.</p><img src="https://tracker.example.org/open.gif?u=1" width="1" height="1" alt=""><img src="https://tracker.example.org/open2.gif" style="display:none"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGP4//8/AAX+Av4N70a4AAAAAElFTkSuQmCC"><img src="https://images.example.org/hero.png" width="600" height="200" alt="Hero"></body></html>

@@ -1,0 +1,17 @@
+From: Ann Sender <ann@example.com>
+To: Bob Reader <bob@example.org>
+Subject: Plain text
+Date: Tue, 24 Nov 2026 10:00:00 +0000
+Message-ID: <fixture@example.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hello Bob,
+
+The notes are at https://www.example.com/docs/notes.
+Write to mailto:ann@example.com if anything is unclear.
+
+> Earlier you wrote:
+> Can you send the notes?
+
+Ann

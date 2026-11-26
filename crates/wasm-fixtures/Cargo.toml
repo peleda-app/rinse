@@ -1,0 +1,19 @@
+[package]
+name = "rinse-wasm-fixtures"
+description = "Test components for the sandbox layer's own tests, built for wasm32-wasip2 at build time"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+repository.workspace = true
+build = "build.rs"
+
+[build-dependencies]
+rinse-build.workspace = true
+
+[package.metadata.dojo]
+kind = "test"
+
+[lints]
+workspace = true

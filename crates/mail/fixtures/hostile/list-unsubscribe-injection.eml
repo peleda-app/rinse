@@ -1,0 +1,18 @@
+From: News <news@example.com>
+To: bob@example.org
+Date: Wed, 25 Nov 2026 10:00:00 +0000
+MIME-Version: 1.0
+List-Unsubscribe: <mailto:x%3Fbcc%3Dvictim%2540evil.example.org%26a@example.com?subject=stop>,
+ <mailto:unsub@example.com?subject=stop%0D%0ABcc:%20victim@example.org&bcc=victim@example.org>,
+ <mailto:unsub@example.com?subject=stop%0D%0ABcc:%20victim@example.org>,
+ <https://news.example.com/u?id=1%0D%0ASet-Cookie:x>, <https://news.example.com/u?id=1%0D%0ASet-Cookie:x>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: Example News <News.Example.com>
+List-Post: NO (posting not allowed)
+Precedence: bulk
+Feedback-ID: 1:2:example
+X-Mailgun-Sid: abc
+Subject: Newsletter
+Content-Type: text/plain; charset=utf-8
+
+Hello

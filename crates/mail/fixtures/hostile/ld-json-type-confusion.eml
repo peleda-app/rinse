@@ -1,0 +1,8 @@
+From: News <news@example.com>
+To: bob@example.org
+Date: Wed, 25 Nov 2026 10:00:00 +0000
+MIME-Version: 1.0
+Subject: Update
+Content-Type: text/html; charset=utf-8
+
+<html><body><script type="application/ld+json">{"@type":5,"orderNumber":"X"}</script><script type="application/ld+json">{"@type":{"nested":"Order"},"orderNumber":"X"}</script><script type="application/ld+json">{"@type":["Order"],"orderNumber":{"value":"X"},"price":1e300,"priceCurrency":"EURO","seller":[[{"name":"x"}]],"orderDate":["2026-02-30"],"url":"javascript:alert(1)"}</script><script type="application/ld+json">{"@type":"FlightReservation","reservationFor":"not an object","reservationNumber":"has space","modifyReservationUrl":"http://169.254.169.254/latest/meta-data/"}</script><script type="application/ld+json">{"@type":"EmailMessage","potentialAction":{"@type":"ConfirmAction","name":"Confirm","target":"javascript:alert(1)"}}</script><script type="application/ld+json">{"@type":"EmailMessage","potentialAction":{"@type":"ViewAction","name":"View ‮order","target":{"@type":"EntryPoint","urlTemplate":"https://shop.example.com/o/1"}}}</script><script type="application/ld+json">{"@type":"Invoice","totalPaymentDue":{"price":"-5","priceCurrency":"USD"},"paymentDueDate":"1969-12-31"}</script><p>Shipping update.</p></body></html>

@@ -1,0 +1,12 @@
+From: No-Reply <no-reply@shop.example.com>
+To: bob@example.org
+Date: Wed, 25 Nov 2026 10:00:00 +0000
+MIME-Version: 1.0
+List-Unsubscribe: <javascript:alert(document.cookie)>, <JaVaScRiPt:alert(1)>, <data:text/html,<script>x</script>>,
+ <http://news.example.com/u>, <https://127.0.0.1/u>, <https://user:pw@news.example.com/u>, <file:///etc/passwd>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Auto-Submitted: auto-generated
+Subject: Unsubscribe
+Content-Type: text/plain; charset=utf-8
+
+Nothing to see.

@@ -1,0 +1,21 @@
+From: Ann Sender <ann@example.com>
+To: Bob Reader <bob@example.org>
+Subject: Logo
+Date: Tue, 24 Nov 2026 10:00:00 +0000
+Message-ID: <fixture@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/related; boundary="R"
+
+--R
+Content-Type: text/html; charset=utf-8
+
+<html><body><p>Our logo:</p><img src="cid:logo@example.com" alt="Logo" width="40" height="30"><p>Banner:</p><img src="https://images.example.com/banner.png" alt="Banner" width="60" height="20"></body></html>
+--R
+Content-Type: image/png
+Content-ID: <logo@example.com>
+Content-Disposition: inline
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAAEElEQVR4nGM4IScHRww4OQD1xwwx
+B+utmQAAAABJRU5ErkJggg==
+--R--

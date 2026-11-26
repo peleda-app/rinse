@@ -1,0 +1,43 @@
+[package]
+name = "rinse-mail-process"
+description = "The content pipeline over rinse-process: a fresh sandboxed worker process per message"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+rinse-mail.workspace = true
+rinse-process.workspace = true
+rinse-sandbox.workspace = true
+async-trait.workspace = true
+bytes.workspace = true
+postcard.workspace = true
+
+[dev-dependencies]
+rinse-mail = { workspace = true, features = ["testing"] }
+rinse-mail-wasm.workspace = true
+rinse-host.workspace = true
+tokio.workspace = true
+
+[target.'cfg(target_os = "macos")'.dev-dependencies]
+rinse-sandbox-macos.workspace = true
+
+[target.'cfg(target_os = "linux")'.dev-dependencies]
+rinse-sandbox-linux.workspace = true
+
+[target.'cfg(not(any(target_os = "macos", target_os = "linux")))'.dev-dependencies]
+rinse-sandbox-none.workspace = true
+
+[[test]]
+name = "conformance"
+harness = false
+
+[package.metadata.dojo]
+kind = "implementation"
+implements = "rinse-mail"
+
+[lints]
+workspace = true

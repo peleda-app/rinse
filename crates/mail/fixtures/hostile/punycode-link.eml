@@ -1,0 +1,15 @@
+From: Ann Sender <ann@example.com>
+To: Bob Reader <bob@example.org>
+Subject: Your account
+Date: Tue, 24 Nov 2026 10:00:00 +0000
+Message-ID: <fixture@example.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html><body>
+<p><a href="https://xn--exmple-cua.com/login">https://www.example.com/login</a></p>
+<p><a href="https://exаmple.com/account">Account</a></p>
+<p><a href="http://192.0.2.10/reset">Reset password</a></p>
+<p><a href="https://www.example.com@evil.example.org/">www.example.com</a></p>
+<p><a href="https://www.example.com/fine">www.example.com/fine</a></p>
+</body></html>

@@ -1,0 +1,21 @@
+From: Ann Sender <ann@example.com>
+To: Bob Reader <bob@example.org>
+Subject: Broken base64
+Date: Tue, 24 Nov 2026 10:00:00 +0000
+Message-ID: <fixture@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="M"
+
+--M
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+SGVsbG8g!!!d29y*bGQ=
+====
+QUJD
+--M
+Content-Type: image/png
+Content-Disposition: attachment; filename="broken.png"
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgo%%%%AAAA

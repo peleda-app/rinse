@@ -1,0 +1,31 @@
+[package]
+name = "rinse-sandbox-macos"
+description = "Seatbelt sandbox for worker processes on macOS: a deny-default profile applied by the worker to itself, CPU limits and a memory watchdog"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[target.'cfg(target_os = "macos")'.dependencies]
+rinse-sandbox.workspace = true
+async-trait.workspace = true
+libc.workspace = true
+rustix = { workspace = true, features = ["process", "time"] }
+tokio = { workspace = true, features = ["process", "io-util", "time"] }
+
+[target.'cfg(target_os = "macos")'.dev-dependencies]
+rinse-sandbox = { workspace = true, features = ["testing"] }
+tokio.workspace = true
+
+[[test]]
+name = "conformance"
+harness = false
+
+[package.metadata.dojo]
+kind = "implementation"
+implements = "rinse-sandbox"
+
+[lints]
+workspace = true

@@ -1,0 +1,42 @@
+[package]
+name = "rinse-mail-engine"
+description = "The content pipeline itself: MIME, HTML to the safe document model, image re-encoding, link and attachment checks"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+rinse-mail.workspace = true
+rinse-doc-model.workspace = true
+rinse-text.workspace = true
+ammonia.workspace = true
+blake3.workspace = true
+bytes.workspace = true
+data-encoding.workspace = true
+html5ever.workspace = true
+idna.workspace = true
+image.workspace = true
+mail-parser.workspace = true
+markup5ever_rcdom.workspace = true
+miniz_oxide.workspace = true
+postcard.workspace = true
+serde_json.workspace = true
+unicode-security.workspace = true
+url.workspace = true
+
+[target.'cfg(windows)'.dependencies]
+blake3 = { workspace = true, features = ["pure"] }
+
+[dev-dependencies]
+rinse-mail = { workspace = true, features = ["testing"] }
+async-trait.workspace = true
+futures.workspace = true
+
+[package.metadata.dojo]
+kind = "library"
+
+[lints]
+workspace = true

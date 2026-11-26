@@ -1,0 +1,19 @@
+[package]
+name = "rinse-text"
+description = "Normalization of untrusted display text: bidi isolation, invisible characters, length caps"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+unicode-normalization.workspace = true
+unicode-segmentation.workspace = true
+
+[package.metadata.dojo]
+kind = "library"
+
+[lints]
+workspace = true

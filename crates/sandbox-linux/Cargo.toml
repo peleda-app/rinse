@@ -1,0 +1,33 @@
+[package]
+name = "rinse-sandbox-linux"
+description = "Worker sandbox on Linux: namespaces, rlimits, no_new_privs, an empty Landlock ruleset and a kill-by-default seccomp filter, applied by the worker to itself"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[target.'cfg(target_os = "linux")'.dependencies]
+rinse-sandbox.workspace = true
+async-trait.workspace = true
+landlock.workspace = true
+libc.workspace = true
+rustix = { workspace = true, features = ["process", "thread", "time"] }
+seccompiler.workspace = true
+tokio = { workspace = true, features = ["process", "io-util", "time"] }
+
+[target.'cfg(target_os = "linux")'.dev-dependencies]
+rinse-sandbox = { workspace = true, features = ["testing"] }
+tokio.workspace = true
+
+[[test]]
+name = "conformance"
+harness = false
+
+[package.metadata.dojo]
+kind = "implementation"
+implements = "rinse-sandbox"
+
+[lints]
+workspace = true

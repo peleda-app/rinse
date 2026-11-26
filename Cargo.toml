@@ -1,0 +1,68 @@
+[workspace]
+resolver = "3"
+members = ["crates/*", "apps/rinse-worker"]
+
+[workspace.package]
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.99"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/peleda-app/rinse"
+publish = false
+
+[workspace.dependencies]
+rinse-build = { path = "crates/build" }
+rinse-sandbox = { path = "crates/sandbox" }
+rinse-sandbox-linux = { path = "crates/sandbox-linux" }
+rinse-sandbox-macos = { path = "crates/sandbox-macos" }
+rinse-sandbox-none = { path = "crates/sandbox-none" }
+rinse-wasm = { path = "crates/wasm" }
+rinse-wasm-fixtures = { path = "crates/wasm-fixtures" }
+rinse-process = { path = "crates/process" }
+rinse-host = { path = "crates/host" }
+
+rinse-text = { path = "crates/text" }
+rinse-doc-model = { path = "crates/doc-model" }
+rinse-mail = { path = "crates/mail" }
+rinse-mail-engine = { path = "crates/mail-engine" }
+rinse-mail-wasm = { path = "crates/mail-wasm" }
+rinse-mail-process = { path = "crates/mail-process" }
+
+async-trait = "0.1"
+bytes = "1"
+futures = "0.3"
+postcard = { version = "1.1", default-features = false, features = ["use-std"] }
+serde = { version = "1", features = ["derive"] }
+thiserror = "2"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "sync", "time"] }
+
+wasmtime = { version = "51", default-features = false, features = ["runtime", "std", "cranelift", "component-model", "parallel-compilation"] }
+wasmtime-wasi = { version = "51", default-features = false, features = ["p2"] }
+rustix = { version = "1.1", default-features = false, features = ["std"] }
+landlock = "0.4"
+seccompiler = "0.5"
+libc = "0.2"
+
+ammonia = "4.2.5"
+blake3 = "1.8.7"
+data-encoding = "2.11"
+html5ever = "0.40.1"
+idna = "1.1.0"
+image = { version = "0.25.10", default-features = false, features = ["png", "jpeg", "gif", "webp", "bmp"] }
+mail-parser = { version = "1.0.2", features = ["full_encoding"] }
+markup5ever_rcdom = "0.40.1"
+miniz_oxide = "0.8.9"
+serde_json = "1.0.145"
+unicode-normalization = "0.1.26"
+unicode-security = "0.1.3"
+unicode-segmentation = "1.13"
+url = "2.5.9"
+
+[workspace.lints.rust]
+unsafe_code = "deny"
+unsafe_op_in_unsafe_fn = "deny"
+missing_docs = "warn"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+undocumented_unsafe_blocks = "deny"

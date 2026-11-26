@@ -1,0 +1,14 @@
+From: News <news@example.com>
+To: bob@example.org
+Date: Wed, 25 Nov 2026 10:00:00 +0000
+MIME-Version: 1.0
+Subject: Fwd: Your parcel
+Content-Type: text/html; charset=utf-8
+
+<html><body>
+<p>Hi Bob, see below.</p>
+<p>---------- Forwarded message ---------<br>From: Shop &lt;shop@example.com&gt;</p>
+<table role="presentation"><tr><td bgcolor="#1a73e8"><a href="https://shop.example.com/track" aria-label="Track your parcel">Track parcel</a></td></tr></table>
+<p><a href="https://shop.example.com/blog" style="color:#333">Read our long blog post about everything that happened this season</a></p>
+<p>&copy; 2026 Example Shop. <a href="https://shop.example.com/unsubscribe?u=1">Unsubscribe</a></p>
+</body></html>

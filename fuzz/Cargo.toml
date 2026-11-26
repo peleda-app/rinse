@@ -1,0 +1,112 @@
+[package]
+name = "rinse-fuzz"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+[package.metadata]
+cargo-fuzz = true
+
+[package.metadata.dojo]
+kind = "fuzz"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[workspace]
+
+[dependencies]
+libfuzzer-sys = "0.4"
+bytes = "1"
+postcard = { version = "1.1", default-features = false, features = ["use-std"] }
+rinse-sandbox = { path = "../crates/sandbox" }
+rinse-mail = { path = "../crates/mail", features = ["testing"] }
+rinse-mail-engine = { path = "../crates/mail-engine" }
+rinse-mail-worker = { path = "../crates/mail-worker" }
+rinse-doc-model = { path = "../crates/doc-model" }
+rinse-text = { path = "../crates/text" }
+unicode-segmentation = "1"
+
+[[bin]]
+name = "frame"
+path = "fuzz_targets/frame.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "announcement"
+path = "fuzz_targets/announcement.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "policy"
+path = "fuzz_targets/policy.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "frames"
+path = "fuzz_targets/frames.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "worker_request"
+path = "fuzz_targets/worker_request.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "render_raw"
+path = "fuzz_targets/render_raw.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "host_response"
+path = "fuzz_targets/host_response.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "doc_model"
+path = "fuzz_targets/doc_model.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "facts"
+path = "fuzz_targets/facts.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "engine_render"
+path = "fuzz_targets/engine_render.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "decode_part"
+path = "fuzz_targets/decode_part.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "text_normalize"
+path = "fuzz_targets/text_normalize.rs"
+test = false
+doc = false
+bench = false

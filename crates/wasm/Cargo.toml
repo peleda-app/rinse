@@ -1,0 +1,29 @@
+[package]
+name = "rinse-wasm"
+description = "Runs an untrusted WebAssembly component, bytes in and bytes out, in a fresh Wasmtime store per call with memory, time and output limits"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[features]
+pulley = []
+
+[dependencies]
+bytes.workspace = true
+thiserror.workspace = true
+tokio = { workspace = true, features = ["rt", "time"] }
+wasmtime = { workspace = true, features = ["pulley"] }
+wasmtime-wasi.workspace = true
+
+[dev-dependencies]
+rinse-wasm-fixtures.workspace = true
+tokio.workspace = true
+
+[package.metadata.dojo]
+kind = "library"
+
+[lints]
+workspace = true

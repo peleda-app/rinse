@@ -1,0 +1,20 @@
+From: Ann <ann@example.com>
+To: bob@example.org
+Subject: One image, many names
+Message-ID: <spellings@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/related; boundary="r1"
+
+--r1
+Content-Type: text/html; charset=utf-8
+
+<p>Logo:</p><img src="cid:logo@example.com" alt="logo"><img src="CID:LOGO@EXAMPLE.COM" alt="logo"><img src="cid:<logo@example.com>" alt="logo"><img src="cid:%6Cogo@example.com" alt="logo"><img src="CID:%6COGO@EXAMPLE.COM" alt="logo"><img src="cid:<%6Cogo@example.com>" alt="logo"><img src="cid:l%6Fgo@example.com" alt="logo"><img src="CID:L%6FGO@EXAMPLE.COM" alt="logo"><img src="cid:<l%6Fgo@example.com>" alt="logo"><img src="cid:%6C%6Fgo@example.com" alt="logo"><img src="CID:%6C%6FGO@EXAMPLE.COM" alt="logo"><img src="cid:<%6C%6Fgo@example.com>" alt="logo"><img src="cid:lo%67o@example.com" alt="logo"><img src="CID:LO%67O@EXAMPLE.COM" alt="logo"><img src="cid:<lo%67o@example.com>" alt="logo"><img src="cid:%6Co%67o@example.com" alt="logo"><img src="CID:%6CO%67O@EXAMPLE.COM" alt="logo"><img src="cid:<%6Co%67o@example.com>" alt="logo"><img src="cid:l%6F%67o@example.com" alt="logo"><img src="CID:L%6F%67O@EXAMPLE.COM" alt="logo"><img src="cid:<l%6F%67o@example.com>" alt="logo"><img src="cid:%6C%6F%67o@example.com" alt="logo"><img src="CID:%6C%6F%67O@EXAMPLE.COM" alt="logo"><img src="cid:<%6C%6F%67o@example.com>" alt="logo"><img src="cid:log%6F@example.com" alt="logo"><img src="CID:LOG%6F@EXAMPLE.COM" alt="logo"><img src="cid:<log%6F@example.com>" alt="logo"><img src="cid:%6Cog%6F@example.com" alt="logo"><img src="CID:%6COG%6F@EXAMPLE.COM" alt="logo"><img src="cid:<%6Cog%6F@example.com>" alt="logo"><img src="cid:l%6Fg%6F@example.com" alt="logo"><img src="CID:L%6FG%6F@EXAMPLE.COM" alt="logo"><img src="cid:<l%6Fg%6F@example.com>" alt="logo"><img src="cid:%6C%6Fg%6F@example.com" alt="logo"><img src="CID:%6C%6FG%6F@EXAMPLE.COM" alt="logo"><img src="cid:<%6C%6Fg%6F@example.com>" alt="logo"><img src="cid:lo%67%6F@example.com" alt="logo"><img src="CID:LO%67%6F@EXAMPLE.COM" alt="logo"><img src="cid:<lo%67%6F@example.com>" alt="logo"><img src="cid:%6Co%67%6F@example.com" alt="logo"><img src="CID:%6CO%67%6F@EXAMPLE.COM" alt="logo"><img src="cid:<%6Co%67%6F@example.com>" alt="logo"><img src="cid:l%6F%67%6F@example.com" alt="logo"><img src="CID:L%6F%67%6F@EXAMPLE.COM" alt="logo"><img src="cid:<l%6F%67%6F@example.com>" alt="logo"><img src="cid:%6C%6F%67%6F@example.com" alt="logo"><img src="CID:%6C%6F%67%6F@EXAMPLE.COM" alt="logo"><img src="cid:<%6C%6F%67%6F@example.com>" alt="logo">
+--r1
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-ID: <logo@example.com>
+Content-Disposition: inline
+
+iVBORw0KGgoAAAANSUhEUgAAAAYAAAACCAIAAAD0PzoJAAAAEElEQVR4nGOQkzuBhhgwhQDfvgwx
+BNtREQAAAABJRU5ErkJggg==
+--r1--

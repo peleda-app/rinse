@@ -1,0 +1,20 @@
+From: Ann Sender <ann@example.com>
+To: Bob Reader <bob@example.org>
+Subject: Huge image
+Date: Tue, 24 Nov 2026 10:00:00 +0000
+Message-ID: <fixture@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/related; boundary="O"
+
+--O
+Content-Type: text/html
+
+<p>Look:</p><img src="cid:huge@example.com">
+--O
+Content-Type: image/png
+Content-ID: <huge@example.com>
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgoAAAANSUhEUgADDUAAAw1ACAIAAAB2WR9dAAAADElEQVR4nGNgoAwAAABAAAG3NHzv
+AAAAAElFTkSuQmCC
+--O--

@@ -1,0 +1,44 @@
+[tools]
+rust = "1.99"
+
+[tasks.check]
+description = "Everything CI runs on every push"
+run = [
+  "bash scripts/check-unsafe.sh",
+  "cargo fmt --check",
+  "cargo fmt --check --manifest-path fuzz/Cargo.toml",
+  "cargo check --manifest-path fuzz/Cargo.toml --bins",
+  "cargo clippy --workspace --all-targets -- -D warnings",
+  "cargo clippy -p rinse-host --features probe --all-targets -- -D warnings",
+  "cargo clippy -p rinse-worker --features probe --all-targets -- -D warnings",
+  "cargo test --workspace",
+  "cargo test -p rinse-host --features probe --test probe",
+  "cargo test -p rinse-worker --features probe --test probe",
+  "cargo test --release -p rinse-wasm",
+  "cargo test --release -p rinse-mail-wasm",
+  "cargo test --release -p rinse-mail-process",
+  "cargo run -q --manifest-path ../dojo/Cargo.toml -p dojo -- check .",
+]
+
+[tasks.linux]
+description = "Run a command in the Linux check image: `mise run linux -- cargo test -p rinse-sandbox-linux`"
+run = "bash tests/linux/run.sh"
+
+[tasks.check-linux]
+description = "The Linux CI checks inside the check image (scripts/check-linux.sh)"
+run = "bash tests/linux/run.sh bash scripts/check-linux.sh"
+
+[tasks.check-windows]
+description = "Windows compile check, cross from any host (no Windows SDK needed for these crates)"
+run = [
+  "cargo check --target aarch64-pc-windows-msvc --all-targets -p rinse-sandbox -p rinse-sandbox-none -p rinse-sandbox-linux -p rinse-sandbox-macos -p rinse-process -p rinse-build",
+  "cargo check --target aarch64-pc-windows-msvc -p rinse-mail -p rinse-mail-engine -p rinse-mail-direct -p rinse-mail-process -p rinse-mail-worker -p rinse-doc-model -p rinse-text",
+]
+
+[tasks.fuzz]
+description = "Fuzz: `mise run fuzz -- all 60` (every target 60 s), `mise run fuzz -- <target> [secs]`, `build`, `list`, `replay <target> <file>`"
+run = "bash fuzz/run.sh"
+
+[tasks.deny]
+description = "Dependency review: advisories, bans, licenses, sources"
+run = "cargo deny check"

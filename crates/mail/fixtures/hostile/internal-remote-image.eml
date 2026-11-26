@@ -1,0 +1,8 @@
+From: Ann <ann@example.com>
+To: bob@example.org
+Subject: Internal images
+Message-ID: <internal@example.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Images</p><img src="http://169.254.169.254/latest/meta-data/a.png" width="40" height="40"><img src="http://127.0.0.1:8080/admin.png" width="40" height="40"><img src="http://[::1]/a.png" width="40" height="40"><img src="http://2130706433/a.png" width="40" height="40"><img src="http://localhost/a.png" width="40" height="40"><img src="https://user:pw@images.example.com/a.png" width="40" height="40"><img src="https://images.example.com/ok.png" width="40" height="40">

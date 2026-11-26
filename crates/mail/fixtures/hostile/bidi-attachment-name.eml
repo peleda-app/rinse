@@ -1,0 +1,21 @@
+From: Ann Sender <ann@example.com>
+To: Bob Reader <bob@example.org>
+Subject: Invoice
+Date: Tue, 24 Nov 2026 10:00:00 +0000
+Message-ID: <fixture@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="X"
+
+--X
+Content-Type: text/plain
+
+Please see the invoice.
+--X
+Content-Type: image/jpeg
+Content-Disposition: attachment; filename*=utf-8''invoice%E2%80%AEgpj.exe
+Content-Transfer-Encoding: base64
+
+TVqQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAFBFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAA
+--X--

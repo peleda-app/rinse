@@ -1,0 +1,21 @@
+[package]
+name = "rinse-doc-model"
+description = "The safe document model: a closed schema for message bodies, limits and validation"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+rinse-text.workspace = true
+postcard.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+
+[package.metadata.dojo]
+kind = "library"
+
+[lints]
+workspace = true

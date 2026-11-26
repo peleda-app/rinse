@@ -1,0 +1,25 @@
+From: News <news@example.com>
+To: bob@example.org
+Date: Wed, 25 Nov 2026 10:00:00 +0000
+MIME-Version: 1.0
+Subject: Invitation
+Content-Type: multipart/mixed; boundary=b1
+
+--b1
+Content-Type: text/plain; charset=utf-8
+
+You are invited.
+--b1
+Content-Type: text/calendar; charset=utf-8; method=REQUEST
+Content-Transfer-Encoding: base64
+
+QkVHSU46VkNBTEVOREFSDQpWRVJTSU9OOjIuMA0KUFJPRElEOi0vL0V4YW1wbGUvL0VODQpNRVRI
+T0Q6UkVRVUVTVA0KQkVHSU46VkVWRU5UDQpVSUQ6bWVldGluZy0xQGV4YW1wbGUuY29tDQpTRVFV
+RU5DRToxDQpPUkdBTklaRVI7Q049IuKArmxhbmlnaXJPIG5uQSI6bWFpbHRvOmFubkBleGFtcGxl
+LmNvbQ0KQVRURU5ERUU7Q049Qm9iOm1haWx0bzpib2JAZXhhbXBsZS5vcmcNClNVTU1BUlk6UXVh
+cnRlcmx5IOKArnJldmlld1wsIHJvb20gNA0KTE9DQVRJT046Um9vbeKAiyA0DQpEVFNUQVJUO1Ra
+SUQ9RXVyb3BlL1ZpbG5pdXM6MjAyNjEyMDFUMTAwMDAwDQpEVEVORDtUWklEPUV1cm9wZS9WaWxu
+aXVzOjIwMjYxMjAxVDExMDAwMA0KU1RBVFVTOkNPTkZJUk1FRA0KRU5EOlZFVkVOVA0KRU5EOlZD
+QUxFTkRBUg0K
+
+--b1--

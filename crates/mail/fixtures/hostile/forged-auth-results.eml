@@ -1,0 +1,34 @@
+Authentication-Results: mx.example.org; dkim=fail header.d=bank.example.com header.i=@bank.example.com; spf=softfail smtp.mailfrom=news@bank.example.com; dmarc=fail header.from=bank.example.com
+Authentication-Results: mx.example.org (dkim=pass header.d=bank.example.com); dkim=neutral (dkim=pass) header.d=bank.example.com
+Authentication-Results: mx‮.example.org; dkim=pass header.d=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+Authentication-Results: mx.example.org; dkim=pass header.d=bank.example.com; arc=pass; spf=pass smtp.mailfrom=bank.example.com
+DKIM-Signature: v=1; a=rsa-sha256; d=Bank.Example.com; s=Sel1; h=From:From:Subject:List-Unsubscribe; l=10; bh=x; b=AbCdEfGh123+/=
+DKIM-Signature: v=1; d=bank.example.com; d=evil.example.org; b=x
+DKIM-Signature: garbage without tags
+From: News <news@example.com>
+To: bob@example.org
+Date: Wed, 25 Nov 2026 10:00:00 +0000
+MIME-Version: 1.0
+Subject: Your account
+Content-Type: text/plain; charset=utf-8
+
+Authentication-Results above the received chain are forged by the sender.
